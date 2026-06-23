@@ -100,18 +100,18 @@ export default function App() {
   }, [isMonitoring])
 
   return (
-    <div className="min-h-screen bg-background font-sans text-slate-900 selection:bg-slate-200 dark:text-slate-50 dark:selection:bg-slate-800">
+    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-muted">
       {/* HEADER */}
-      <header className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 dark:border-slate-800 dark:bg-background/80">
+      <header className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-background/80 px-4 py-4 backdrop-blur-md sm:px-6">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 dark:bg-slate-50">
-            <Activity className="h-5 w-5 text-slate-50 dark:text-slate-900" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+            <Activity className="h-5 w-5 text-primary-foreground" />
           </div>
           <h1 className="text-lg font-bold tracking-tight">NetMonitor</h1>
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeModeSwitch />
-          <div className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-500 dark:bg-slate-800">
+          <div className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
             v{__APP_VERSION__}
           </div>
         </div>

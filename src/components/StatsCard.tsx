@@ -18,14 +18,14 @@ export const StatsCard = ({ stats }: StatsCardProps) => {
   return (
     <Card>
       <CardHeader className="pb-2">
-        <CardTitle className="text-sm tracking-wider text-slate-500 uppercase">
+        <CardTitle className="text-sm tracking-wider text-muted-foreground uppercase">
           Session Stats
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="mb-4 grid grid-cols-2 gap-3">
-          <div className="rounded-lg border border-slate-100 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-900/50">
-            <div className="mb-1 flex items-center text-[11px] text-slate-500">
+          <div className="rounded-lg border border-border bg-muted/50 p-3">
+            <div className="mb-1 flex items-center text-[11px] text-muted-foreground">
               <Zap className="mr-1 h-3 w-3" /> Total
             </div>
             <div className="font-mono text-xl font-semibold">{stats.total}</div>
@@ -58,7 +58,7 @@ export const StatsCard = ({ stats }: StatsCardProps) => {
 
         <div className="space-y-1.5">
           <div className="flex justify-between text-xs font-medium">
-            <span className="text-slate-500">Uptime Reliability</span>
+            <span className="text-muted-foreground">Uptime Reliability</span>
             <span
               className={
                 uptimePercentage >= 95
@@ -71,7 +71,7 @@ export const StatsCard = ({ stats }: StatsCardProps) => {
               {uptimePercentage}%
             </span>
           </div>
-          <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+          <div className="h-2.5 w-full overflow-hidden rounded-full bg-muted">
             <div
               className={`h-full transition-all duration-500 ${
                 stats.total === 0

@@ -21,17 +21,17 @@ export const TickLog = ({ history, clearHistory }: TickLogProps) => {
     <div className="flex flex-1 flex-col">
       <Card className="flex min-h-[500px] flex-1 flex-col gap-0 py-0 shadow-sm lg:h-full lg:min-h-0">
         {/* TICK LOG HEADER */}
-        <CardHeader className="relative z-10 !space-y-0 rounded-t-xl border-b border-slate-100 bg-white px-4 !py-3 shadow-sm sm:px-6 dark:border-slate-800 dark:bg-card">
+        <CardHeader className="relative z-10 !space-y-0 rounded-t-xl border-b border-border bg-card px-4 !py-3 shadow-sm sm:px-6">
           <div className="flex w-full flex-row items-center justify-between gap-2">
             <div className="flex flex-col gap-1 overflow-hidden sm:flex-row sm:items-center sm:gap-4">
               <div className="flex shrink-0 items-center gap-2">
-                <List className="h-4 w-4 text-slate-500" />
+                <List className="h-4 w-4 text-muted-foreground" />
                 <CardTitle className="text-base sm:text-lg">Tick Log</CardTitle>
                 <Badge variant="secondary" className="font-mono text-[10px]">
                   {history.length} / 100
                 </Badge>
               </div>
-              <div className="hidden h-4 w-px shrink-0 bg-slate-200 sm:block dark:bg-slate-800" />
+              <div className="hidden h-4 w-px shrink-0 bg-border sm:block" />
               <CardDescription className="truncate text-xs sm:text-sm">
                 Live network latency history
               </CardDescription>
@@ -50,13 +50,13 @@ export const TickLog = ({ history, clearHistory }: TickLogProps) => {
           </div>
         </CardHeader>
 
-        <CardContent className="relative flex-1 overflow-hidden bg-slate-50/30 p-0 dark:bg-card">
+        <CardContent className="relative flex-1 overflow-hidden bg-muted/30 p-0">
           {history.length === 0 ? (
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-slate-400">
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-muted-foreground">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                 <Clock className="h-8 w-8 opacity-40" />
               </div>
-              <p className="font-medium text-slate-600 dark:text-slate-300">
+              <p className="font-medium text-foreground">
                 Awaiting Data
               </p>
               <p className="mt-1 max-w-[200px] text-sm">
@@ -82,11 +82,11 @@ export const TickLog = ({ history, clearHistory }: TickLogProps) => {
               background: transparent;
             }
             .custom-scrollbar::-webkit-scrollbar-thumb {
-              background-color: #cbd5e1;
+              background-color: #d4d4d4;
               border-radius: 10px;
             }
             .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-              background-color: #334155;
+              background-color: #525252;
             }
           `,
         }}

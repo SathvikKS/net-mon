@@ -27,7 +27,7 @@ export function ThemeModeSwitch() {
         <Button
           variant="ghost"
           size="icon-sm"
-          className="rounded-full text-slate-500 hover:bg-slate-100 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+          className="rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
           aria-label={`Theme: ${current.label}`}
         >
           <CurrentIcon />

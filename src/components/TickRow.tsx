@@ -13,12 +13,12 @@ export const TickRow = memo(({ tick, isFirst }: TickRowProps) => {
     <div
       className={`flex items-center justify-between rounded-xl border p-3 transition-all ${
         isFirst
-          ? "border-slate-200 bg-white shadow-sm ring-1 ring-slate-900/5 dark:border-slate-700 dark:bg-slate-900 dark:ring-white/5"
-          : "border-transparent bg-slate-50/50 hover:border-slate-200 dark:bg-slate-900/20 dark:hover:border-slate-800"
+          ? "border-border bg-card shadow-sm ring-1 ring-foreground/5"
+          : "border-transparent bg-muted/50 hover:border-border"
       }`}
     >
       <div className="flex items-center gap-3 sm:gap-4">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted">
           {tick.isOnline ? (
             <Wifi className="h-4 w-4 text-emerald-500" />
           ) : (
@@ -26,10 +26,10 @@ export const TickRow = memo(({ tick, isFirst }: TickRowProps) => {
           )}
         </div>
         <div className="flex flex-col">
-          <span className="font-mono text-xs font-medium text-slate-700 sm:text-sm dark:text-slate-300">
+          <span className="font-mono text-xs font-medium text-foreground sm:text-sm">
             {tick.timestamp}
           </span>
-          <span className="text-[10px] text-slate-500 sm:text-xs md:hidden">
+          <span className="text-[10px] text-muted-foreground sm:text-xs md:hidden">
             {tick.isOnline ? "Online" : "Offline"}
           </span>
         </div>
@@ -43,9 +43,9 @@ export const TickRow = memo(({ tick, isFirst }: TickRowProps) => {
             <Badge variant="destructive">Offline</Badge>
           )}
         </div>
-        <div className="flex min-w-[70px] items-center justify-end font-mono text-sm font-semibold text-slate-700 sm:text-base dark:text-slate-200">
+        <div className="flex min-w-[70px] items-center justify-end font-mono text-sm font-semibold text-foreground sm:text-base">
           {tick.latency}
-          <span className="ml-0.5 text-xs font-normal text-slate-400">ms</span>
+          <span className="ml-0.5 text-xs font-normal text-muted-foreground">ms</span>
         </div>
       </div>
     </div>

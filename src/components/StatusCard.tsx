@@ -44,23 +44,23 @@ export const StatusCard = ({
         return {
           title: "Standby",
           subtitle: "Monitoring Paused",
-          icon: <Activity className="h-8 w-8 text-slate-400 sm:h-10 sm:w-10" />,
-          color: "text-slate-700 dark:text-slate-300",
-          bgRing: "bg-slate-100 dark:bg-slate-800",
+          icon: <Activity className="h-8 w-8 text-muted-foreground sm:h-10 sm:w-10" />,
+          color: "text-foreground",
+          bgRing: "bg-muted",
           pulse: "",
         }
     }
   }, [currentStatus])
 
   return (
-    <Card className="overflow-hidden border-0 pt-0 shadow-md ring-1 ring-slate-200 dark:ring-slate-800">
+    <Card className="overflow-hidden border-0 pt-0 shadow-md ring-1 ring-border">
       <div
         className={`h-1.5 w-full transition-colors duration-500 ${
           currentStatus === "online"
             ? "bg-emerald-500"
             : currentStatus === "offline"
               ? "bg-red-500"
-              : "bg-slate-200 dark:bg-slate-800"
+              : "bg-muted"
         }`}
       />
 
@@ -82,7 +82,7 @@ export const StatusCard = ({
           >
             {display.title}
           </h2>
-          <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+          <p className="mt-1 text-sm font-medium text-muted-foreground">
             {display.subtitle}
           </p>
         </div>
@@ -104,13 +104,13 @@ export const StatusCard = ({
             )}
           </Button>
 
-          <div className="rounded-xl border border-slate-100 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/50">
+          <div className="rounded-xl border border-border bg-muted/50 p-4">
             <div className="mb-3 flex items-center justify-between">
-              <label className="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300">
-                <Settings2 className="mr-1.5 h-4 w-4 text-slate-400" />
+              <label className="flex items-center text-sm font-semibold text-foreground">
+                <Settings2 className="mr-1.5 h-4 w-4 text-muted-foreground" />
                 Tick Interval
               </label>
-              <span className="rounded border border-slate-200 bg-white px-2 py-0.5 font-mono text-sm font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
+              <span className="rounded border border-border bg-background px-2 py-0.5 font-mono text-sm font-medium text-muted-foreground shadow-sm">
                 {tickSpeed}s
               </span>
             </div>
@@ -123,7 +123,7 @@ export const StatusCard = ({
                 onValueChange={(val) => setTickSpeed(val[0])}
               />
             </div>
-            <div className="mt-1.5 flex justify-between px-1 text-[11px] font-medium text-slate-400">
+            <div className="mt-1.5 flex justify-between px-1 text-[11px] font-medium text-muted-foreground">
               <span>Fast (1s)</span>
               <span>Slow (100s)</span>
             </div>
