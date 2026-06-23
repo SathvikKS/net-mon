@@ -21,7 +21,7 @@ export const TickLog = ({ history, clearHistory }: TickLogProps) => {
     <div className="flex flex-1 flex-col">
       <Card className="flex min-h-[500px] flex-1 flex-col gap-0 py-0 shadow-sm lg:h-full lg:min-h-0">
         {/* TICK LOG HEADER */}
-        <CardHeader className="relative z-10 !space-y-0 rounded-t-xl border-b border-slate-100 bg-white px-4 !py-3 shadow-sm sm:px-6 dark:border-slate-800 dark:bg-slate-950">
+        <CardHeader className="relative z-10 !space-y-0 rounded-t-xl border-b border-slate-100 bg-white px-4 !py-3 shadow-sm sm:px-6 dark:border-slate-800 dark:bg-card">
           <div className="flex w-full flex-row items-center justify-between gap-2">
             <div className="flex flex-col gap-1 overflow-hidden sm:flex-row sm:items-center sm:gap-4">
               <div className="flex shrink-0 items-center gap-2">
@@ -50,7 +50,7 @@ export const TickLog = ({ history, clearHistory }: TickLogProps) => {
           </div>
         </CardHeader>
 
-        <CardContent className="relative flex-1 overflow-hidden bg-slate-50/30 p-0 dark:bg-slate-950">
+        <CardContent className="relative flex-1 overflow-hidden bg-slate-50/30 p-0 dark:bg-card">
           {history.length === 0 ? (
             <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-slate-400">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">

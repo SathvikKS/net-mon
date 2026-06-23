@@ -100,9 +100,9 @@ export default function App() {
   }, [isMonitoring])
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-slate-200 dark:bg-slate-950 dark:text-slate-50 dark:selection:bg-slate-800">
+    <div className="min-h-screen bg-background font-sans text-slate-900 selection:bg-slate-200 dark:text-slate-50 dark:selection:bg-slate-800">
       {/* HEADER */}
-      <header className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 dark:border-slate-800 dark:bg-slate-950/80">
+      <header className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-md sm:px-6 dark:border-slate-800 dark:bg-background/80">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 dark:bg-slate-50">
             <Activity className="h-5 w-5 text-slate-50 dark:text-slate-900" />
