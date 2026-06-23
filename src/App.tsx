@@ -109,7 +109,7 @@ export default function App() {
           <h1 className="text-lg font-bold tracking-tight">NetMonitor</h1>
         </div>
         <div className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-500 dark:bg-slate-800">
-          v1.2.0-ts
+          v{__APP_VERSION__}
         </div>
       </header>
 
