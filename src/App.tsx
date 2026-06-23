@@ -21,6 +21,13 @@ export default function App() {
   const isCheckingRef = useRef<boolean>(false)
   const wasMonitoringRef = useRef<boolean>(false)
 
+  useEffect(() => {
+    fetch("https://www.google.com/generate_204", {
+      mode: "no-cors",
+      cache: "no-store",
+    }).catch(() => {})
+  }, [])
+
   const performCheck = useCallback(async () => {
     if (isCheckingRef.current) {
       setStats((prev) => ({ ...prev, skipped: prev.skipped + 1 }))
