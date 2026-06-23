@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react"
 import { Activity } from "lucide-react"
+import { ThemeModeSwitch } from "@/components/ThemeModeSwitch"
 import { StatusCard } from "@/components/StatusCard"
 import { StatsCard } from "@/components/StatsCard"
 import { TickLog } from "@/components/TickLog"
@@ -108,8 +109,11 @@ export default function App() {
           </div>
           <h1 className="text-lg font-bold tracking-tight">NetMonitor</h1>
         </div>
-        <div className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-500 dark:bg-slate-800">
-          v{__APP_VERSION__}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ThemeModeSwitch />
+          <div className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-500 dark:bg-slate-800">
+            v{__APP_VERSION__}
+          </div>
         </div>
       </header>
 
